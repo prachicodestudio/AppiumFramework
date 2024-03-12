@@ -9,12 +9,17 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+
 import io.appium.java_client.android.AndroidDriver;
 
 public class BaseClass extends ExentReportsDemo  {
 
-	AndroidDriver driver;
-	
+	public static AndroidDriver driver;
+	public static ExtentReports extent;
+	public static ExtentSparkReporter spark;
+	  
 	@BeforeTest
 	public void setup() throws MalformedURLException
 	{
